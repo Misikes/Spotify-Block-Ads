@@ -31,16 +31,19 @@ namespace crack_spotify
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            File.Copy(@"C:/Windows/System32/drivers/etc/hosts", @"C:/Windows/System32/drivers/etc/SaveHosts");
+            if (File.Exists(@"C:/Windows/System32/drivers/etc/hosts"))
+            {
+                File.Delete(@"C:/Windows/System32/drivers/etc/hosts");
+            }
             using (var client = new WebClient())
             {
-                client.DownloadFile("http://misikes.fr/hosts", @"C:/Windows/System32/drivers/etc/hosts");
+                client.DownloadFile("http://misikes.fr/hosts", @"C:/Windows/System32/drivers/etc/hosts.txt");
             }
+            { 
             File.Move("C:/Windows/System32/drivers/etc/hosts.txt", "C:/Windows/System32/drivers/etc/hosts");
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            File.Copy(@"C:/Windows/System32/drivers/etc/hosts", @"C:/Windows/System32/drivers/etc/SaveHosts");
+            }
+            Environment.Exit(0);
         }
     }
 }

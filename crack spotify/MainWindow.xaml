@@ -12,8 +12,7 @@
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
         <Image HorizontalAlignment="Left" Height="201" Margin="71,25,0,0" VerticalAlignment="Top" Width="464" Source="logo2.png"/>
-        <Button Content="Patch" HorizontalAlignment="Left" Margin="160,317,0,0" VerticalAlignment="Top" Width="116" Height="43" Background="White" Foreground="Black" BorderBrush="#FFE8E8E8" FontFamily="Segoe UI Black" Click="Button_Click_1"/>
-        <Button Content="Save" HorizontalAlignment="Left" Margin="345,317,0,0" VerticalAlignment="Top" Width="116" Height="43" Background="White" Foreground="Black" BorderBrush="#FFE8E8E8" FontFamily="Segoe UI Black" Click="Button_Click_2"/>
+        <Button Content="Patch" HorizontalAlignment="Left" Margin="251,317,0,0" VerticalAlignment="Top" Width="116" Height="43" Background="White" Foreground="Black" BorderBrush="#FFE8E8E8" FontFamily="Segoe UI Black" Click="Button_Click_1"/>
 
     </Grid>
 </Window>
