@@ -1,4 +1,4 @@
 # Spotify-Block-Ads
 Spotify Block Ads
 
-Software already compile : http://misikes.fr/Crack%20spotify.exe
+Software already compile (to open as an administrator) : http://misikes.fr/Spotify-Block-Ads.exe
