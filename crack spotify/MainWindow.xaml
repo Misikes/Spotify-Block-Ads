@@ -5,14 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:crack_spotify"
         mc:Ignorable="d"
-        Title="Crack spotify" Height="438.511" Width="617.128" Icon="logo.png" ResizeMode="NoResize">
+        Title="Spotify Block Ads" Height="438.511" Width="617.128" Icon="logo.png" ResizeMode="NoResize">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="88*"/>
+            <ColumnDefinition Width="523*"/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <Image HorizontalAlignment="Left" Height="201" Margin="71,25,0,0" VerticalAlignment="Top" Width="464" Source="logo2.png"/>
-        <Button Content="Patch" HorizontalAlignment="Left" Margin="251,317,0,0" VerticalAlignment="Top" Width="116" Height="43" Background="White" Foreground="Black" BorderBrush="#FFE8E8E8" FontFamily="Segoe UI Black" Click="Button_Click_1"/>
+        <Image HorizontalAlignment="Left" Height="201" Margin="71,25,0,0" VerticalAlignment="Top" Width="464" Source="logo2.png" Grid.ColumnSpan="2"/>
+        <Button Content="Patch" HorizontalAlignment="Left" Margin="163.499,317,0,0" VerticalAlignment="Top" Width="116" Height="43" Background="White" Foreground="Black" BorderBrush="#FFE8E8E8" FontFamily="Segoe UI Black" Click="Button_Click_1" Grid.Column="1"/>
 
     </Grid>
 </Window>

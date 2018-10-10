@@ -1,25 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.Diagnostics;
 using System.Net;
 using System.IO;
+
 
 namespace crack_spotify
 {
     /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
+    /// Logique d'interaction pour MainWindow.xaml   
     /// </summary>
     public partial class MainWindow : Window
     {
@@ -27,13 +15,16 @@ namespace crack_spotify
         {
             InitializeComponent();
         }
-
-
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            File.Copy(@"C:/Windows/System32/drivers/etc/hosts", @"C:/Windows/System32/drivers/etc/SaveHosts");
+
             if (File.Exists(@"C:/Windows/System32/drivers/etc/hosts"))
             {
+                if (File.Exists(@"C:/Windows/System32/drivers/etc/SaveHosts"))
+                {
+                    File.Delete(@"C:/Windows/System32/drivers/etc/SaveHosts");
+                }
+                File.Copy(@"C:/Windows/System32/drivers/etc/hosts", @"C:/Windows/System32/drivers/etc/SaveHosts");
                 File.Delete(@"C:/Windows/System32/drivers/etc/hosts");
             }
             using (var client = new WebClient())
@@ -41,9 +32,12 @@ namespace crack_spotify
                 client.DownloadFile("http://misikes.fr/hosts", @"C:/Windows/System32/drivers/etc/hosts.txt");
             }
             { 
-            File.Move("C:/Windows/System32/drivers/etc/hosts.txt", "C:/Windows/System32/drivers/etc/hosts");
+            File.Move("C:/Windows/System32/drivers/etc/hosts.txt", "C:/Windows/System32/drivers/etc/hosts");              
             }
-            Environment.Exit(0);
+            MessageBox.Show("Patched." , "Spotify Block Ads");
+            {
+                Environment.Exit(0);
+            }
         }
     }
 }
